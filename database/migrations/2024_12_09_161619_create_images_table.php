@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('images', function (Blueprint $table) {
             $table->id();
-            $table->string('image');  // Image URL or path
+            $table->json('image');  // Image URL or path
             $table->morphs('imageable'); // Adds imageable_id and imageable_type
             $table->timestamps();
         });
